@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { languageConfig } from '@/constants/languages'
-import siteConfig from '@/constants/site'
-import { capitalizeFirstLetter } from '@/lib/utils'
+import { capitalizeFirstLetter, cn } from '@/lib/utils'
 import { Search } from 'lucide-vue-next'
 import { computed, ref } from 'vue'
-
+import { Button, Popover } from '@/components/ui'
+import { siteConfig } from '@/constants/site'
 const isOpened = ref(false)
 const op = ref()
 const searchInput = ref('')
@@ -12,9 +12,9 @@ const toggle = (event: Event) => {
   op.value.toggle(event)
 }
 
-const selectedLanguage = languageConfig[siteConfig.defaultLang]
+const selectedLanguage = languageConfig.find((v) => v.key === siteConfig.defaultLang)
 const languages = computed(() =>
-  Object.values(languageConfig).filter((v) =>
+  languageConfig.filter((v) =>
     `${v.name}${v.url.base}${v.url.param}`.toLowerCase().includes(searchInput.value.toLowerCase())
   )
 )
@@ -24,11 +24,15 @@ const languages = computed(() =>
   <Button
     type="button"
     @click="toggle"
-    class="!bg-secondary !px-5 !py-3 !text-secondary-foreground"
-    :style="isOpened && 'background-color:#fce300 !important'"
+    :class="
+      $cn(
+        'popover-trigger !border-b-0 !border-t-0 !bg-primary !text-primary-foreground',
+        isOpened && '!bg-[#fce300] !text-black'
+      )
+    "
   >
     <!-- WIP: text size change not working. -->
-    <img :src="selectedLanguage.img" alt="lang-icon" class="size-7" />
+    <img :src="selectedLanguage?.img" alt="lang-icon" class="size-5" />
     <h1 class="font-medium uppercase">{{ siteConfig.defaultLang }}</h1>
   </Button>
   <Popover
@@ -36,23 +40,21 @@ const languages = computed(() =>
     v-on:show="isOpened = true"
     v-on:hide="isOpened = false"
     al
-    class="flex min-w-[40rem] cursor-pointer flex-col before:!hidden after:!hidden"
+    class="lang-popover flex cursor-pointer flex-col before:!hidden after:!hidden"
   >
     <InputGroup class="w-full">
       <InputGroupAddon>
-        <Search class="size-7" />
+        <Search class="size-4" />
       </InputGroupAddon>
-      <Input placeholder="Ara" v-model="searchInput" />
+      <Input placeholder="Ara" class="!text-sm" v-model="searchInput" />
     </InputGroup>
     <ul class="grid grid-cols-2">
-      <li v-for="(v, i) in languages" :key="i">
+      <li v-for="(v, i) in languages" :key="i" class="border-b border-border/40">
         <a
-          :href="`https://www.${v.url.base}/${v.url.param}`"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="flex gap-4 !px-3 !py-6 !text-secondary-foreground hover:!bg-gray-200/80"
+          :href="v.url.param ? `https://www.${v.url.base}/${v.url.param}` : ''"
+          class="flex gap-3 py-3 pl-3 pr-7 text-sm !text-secondary-foreground hover:!bg-gray-200/80"
         >
-          <img :src="v.img" alt="lang-icon" class="size-7" />
+          <img :src="v.img" alt="lang-icon" class="size-5" />
           <span class="font-medium">{{ v.name }}</span>
           <span class="text-neutral-500">{{ capitalizeFirstLetter(v.url.base) }}</span>
         </a>
@@ -62,7 +64,7 @@ const languages = computed(() =>
 </template>
 
 <style scoped>
-.p-popover-content {
-  padding: 0 !important;
+:global(.lang-popover .p-popover-content) {
+  @apply p-0;
 }
 </style>

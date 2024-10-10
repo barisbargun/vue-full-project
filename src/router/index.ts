@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/home/Home.vue'
-
+import Home from "@/views/home/Home.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -17,7 +16,10 @@ const router = createRouter({
     //   // which is lazy-loaded when the route is visited.
     //   component: () => import('../views/AboutView.vue')
     // }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0 }
+  }
 })
 
 export default router

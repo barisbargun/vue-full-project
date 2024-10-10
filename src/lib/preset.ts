@@ -3,21 +3,39 @@ import Aura from '@primevue/themes/aura';
 
 const Preset = definePreset(Aura, {
     semantic: {
-        primary: palette('{blue}'),
+        primary: {
+            50: '{blue.50}',
+            100: '{blue.100}',
+            200: '{blue.200}',
+            300: '{blue.300}',
+            400: '{blue.400}',
+            500: '{blue.500}',
+            600: '{blue.600}',
+            700: '{blue.700}',
+            800: 'hsl(var(--primary))',
+            900: '{blue.900}',
+            950: '{blue.950}'
+        },
         colorScheme: {
             light: {
                 primary: {
-                    color: '{primary.500}',
+                    color: '{primary.700}',
                     contrastColor: '#ffffff',
-                    hoverColor: '{primary.600}',
-                    activeColor: '{primary.700}',
+                    hoverColor: '{primary.800}',
+                    activeColor: '{primary.900}',
                 },
                 highlight: {
                     background: '{primary.100}',
                     focusBackground: '{primary.200}',
-                    color: '{primary.700}',
+                    color: '{primary.900}',
                     focusColor: '{primary.800}',
                 },
+                text: {
+                    color: 'hsl(var(--text-foreground))',
+                    hoverColor: '{surface.800}',
+                    mutedColor: '{surface.500}',
+                    hoverMutedColor: '{surface.600}'
+                }
             },
             dark: {
                 primary: {
@@ -36,6 +54,7 @@ const Preset = definePreset(Aura, {
                 },
             },
         },
+
     }
 });
 

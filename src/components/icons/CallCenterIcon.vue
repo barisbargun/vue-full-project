@@ -1,9 +1,7 @@
 <script setup lang="ts">
-interface Props {
+const { fill = 'hsl(var(--primary))' } = defineProps<{
   fill?: string
-}
-
-const props = defineProps<Props>()
+}>()
 </script>
 
 <template>

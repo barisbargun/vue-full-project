@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { CallCenterIcon, PhoneCallIcon } from '@/components/icons'
 import { ref } from 'vue'
+import { Button, Popover } from '@/components/ui'
 
 const isOpened = ref(false)
 const op = ref()
@@ -13,9 +14,10 @@ const toggle = (event: Event) => {
   <Button
     type="button"
     @click="toggle"
-    class="!bg-secondary !px-5 !py-3 text-sm font-medium !text-secondary-foreground"
-    :style="isOpened && 'background-color:#fce300 !important'"
-    >7/24 <PhoneCallIcon fill="hsl(var(--primary))" class="size-6 scale-x-[-1]" />
+    :class="
+      $cn('popover-trigger !bg-secondary !text-secondary-foreground', isOpened && '!bg-[#fce300]')
+    "
+    >7/24 <PhoneCallIcon class="size-4 scale-x-[-1]" />
   </Button>
 
   <Popover
@@ -23,10 +25,10 @@ const toggle = (event: Event) => {
     v-on:show="isOpened = true"
     v-on:hide="isOpened = false"
     al
-    class="cursor-pointer !bg-[#fce300] px-3 py-1 before:!hidden after:!hidden"
+    class="cursor-pointer !bg-[#fce300] before:!hidden after:!hidden"
   >
     <div class="flex items-center gap-4">
-      <CallCenterIcon fill="black" class="size-12" />
+      <CallCenterIcon fill="black" class="size-10" />
       <div>
         <p class="text-sm font-medium">Misafir Merkezi</p>
         <strong class="text-sm">0850 360 5 360</strong>

@@ -1,10 +1,13 @@
 <script setup lang="ts">
-import Topbar from '@/components/navs/Topbar.vue'
 import Toast from 'primevue/toast'
+import Topbar from './features/navs/topbar/Topbar.vue'
 </script>
 
 <template>
   <Topbar />
+  <main>
+    <RouterView />
+  </main>
   <Toast />
 </template>
 

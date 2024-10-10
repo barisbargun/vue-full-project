@@ -3,7 +3,7 @@
   RESPONSIVE FONT SIZES
 
 */
-@layer base {
+/* @layer base {
   html {
     @apply text-[10px] sm:text-[11.6px] lg:text-[12.96px] xl:text-[14.4px] 2xl:text-[16px];
   }
@@ -19,5 +19,5 @@
   .text-base {
     @apply max-md:!text-[12px] max-md:!leading-[17px];
   }
-}
+} */
 

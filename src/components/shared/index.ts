@@ -1,0 +1,1 @@
+export {default as BlankImgLink} from "./BlankImgLink.vue";
