@@ -34,10 +34,6 @@
   .flex-center {
     @apply flex items-center justify-center;
   }
-
-  .p-padding {
-    @apply px-4 lg:px-6 xl:px-8;
-  }
 }
 
 @layer components {
@@ -54,6 +50,6 @@
   }
 }
 
-.abc {
-  background-color: red;
+.p-padding {
+  @apply px-4 lg:px-6 xl:px-8;
 }

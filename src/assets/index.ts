@@ -12,6 +12,12 @@ import linkedin from "./brands/linkedin.svg";
 import twitter from "./brands/twitter.svg";
 import youtube from "./brands/youtube.svg";
 
+/** Credit Provider */
+import amex from "./credit-provider/amex.png";
+import maestro from "./credit-provider/maestro.png";
+import mastercard from "./credit-provider/mastercard.png";
+import visa from "./credit-provider/visa.png";
+
 /** Icons */
 import languagesTrIcon from "./icons/languages/tr.svg";
 
@@ -25,6 +31,9 @@ import supplier2 from "./suppliers/2.png";
 /** Others */
 import qrCode from "./others/qr-code.png";
 import envelope from "./others/envelope.svg";
+import car from "./others/car.png";
+import discount from "./others/discount.png";
+import plane from "./others/plane.png";
 
 export default {
   logo,
@@ -40,6 +49,12 @@ export default {
     twitter,
     youtube
   },
+  creditProvider: {
+    amex,
+    maestro,
+    mastercard,
+    visa
+  },
   icons: {
     languagesTrIcon,
   },
@@ -49,6 +64,9 @@ export default {
   suppliers: [supplier1, supplier2, supplier1, supplier2, supplier1, supplier2, supplier1, supplier2, supplier1, supplier2],
   others: {
     qrCode,
-    envelope
+    envelope,
+    car,
+    discount,
+    plane
   }
 };

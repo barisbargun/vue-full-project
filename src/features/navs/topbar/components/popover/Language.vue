@@ -3,7 +3,7 @@ import { languageConfig } from '@/constants/languages'
 import { capitalizeFirstLetter, cn } from '@/lib/utils'
 import { Search } from 'lucide-vue-next'
 import { computed, ref } from 'vue'
-import { Button, Popover } from '@/components/ui'
+import { Button, Input, InputGroup, InputGroupAddon, Popover } from '@/components/ui'
 import { siteConfig } from '@/constants/site'
 const isOpened = ref(false)
 const op = ref()

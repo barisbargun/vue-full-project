@@ -1,0 +1,29 @@
+{
+  "campaigns": [
+    {
+      "id": "uzun-donem-kiralama",
+      "title": "Uzun Dönem Kiralama",
+      "desc": "Uzun dönem kiralama kampanyası ile aracınızı 1 yıl boyunca kiralayın, %20 indirim kazanın.",
+      "img": "https://strapi.yolcu360.com/aylikkirala5000_slider_fc92547df5.jpg",
+      "type": "vehicle",
+      "transactionDate": {
+        "start": "2024-10-04",
+        "end": "2024-10-31"
+      },
+      "rentDate": {
+        "start": "2024-10-04",
+        "end": "2025-12-31"
+      },
+      "conditions": {
+        "main": [
+          "İndirim 30 gün ve üzeri kiralamalar için geçerlidir. ",
+          "İndirime, yolcu360.com internet sitesindeki kampanya sayfasında arama yaparak indirimli fiyatları listeleyebilir veya Yolcu360 mobil uygulamasındaki kampanya sayfasında bulunan butonuna tıklayarak indirimli kiralama işlemini gerçekleştirebilirsiniz"
+        ],
+        "other": [
+          "İndirim dahilinde rezervasyon yapılan aracın tesliminde ilgili firmanın kullanım koşulları geçerli olup, kiralayan kişi bu koşulları sağlamalıdır. Koşulların sağlanmadığı durumda yapılacak değişimlerde İndirimi koşulları geçersiz sayılacaktır.",
+          "İndirim başka bir kampanya veya indirim kodu ile birleştirilemez."
+        ]
+      }
+    }
+  ]
+}

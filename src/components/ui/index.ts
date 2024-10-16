@@ -10,3 +10,5 @@ export { default as Accordion } from "primevue/accordion";
 export { default as AccordionPanel } from "primevue/accordionpanel";
 export { default as AccordionHeader } from "primevue/accordionheader";
 export { default as AccordionContent } from "primevue/accordioncontent";
+export { default as Breadcrumb } from "primevue/breadcrumb";
+export { default as Card } from "primevue/card";

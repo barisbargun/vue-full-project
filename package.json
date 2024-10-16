@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "server": "bunx json-server ./src/server/db.json --port 3001",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "test:unit": "vitest",
@@ -16,6 +17,7 @@
   },
   "dependencies": {
     "@primevue/themes": "^4.0.7",
+    "axios": "^1.7.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "json-server": "^1.0.0-beta.2",
@@ -24,7 +26,8 @@
     "primevue": "^4.0.7",
     "tailwind-merge": "^2.5.2",
     "vue": "^3.4.29",
-    "vue-router": "^4.3.3"
+    "vue-router": "^4.3.3",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@playwright/test": "^1.44.1",

@@ -1,0 +1,1 @@
+type NavPath = 'home' | 'campaign';

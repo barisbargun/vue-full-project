@@ -64,19 +64,19 @@ export const linksConfig = {
       title: "Araç Kiralama",
       links: [
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "Araç Kiralama Şirketleri",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "Araç Kiralama Şirketleri",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "Araç Kiralama Şirketleri",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "Araç Kiralama Şirketleri",
         }
       ]
@@ -85,43 +85,43 @@ export const linksConfig = {
       title: "Popüler Lokasyonlar",
       links: [
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "İstanbul Araç Kiralama",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "İstanbul Araç Kiralama",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "İstanbul Araç Kiralama",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "İstanbul Araç Kiralama",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "İstanbul Araç Kiralama",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "İstanbul Araç Kiralama",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "İstanbul Araç Kiralama",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "İstanbul Araç Kiralama",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "İstanbul Araç Kiralama",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "İstanbul Araç Kiralama",
         }
       ]
@@ -130,43 +130,43 @@ export const linksConfig = {
       title: "Popüler Araç Kiralama Şirketleri",
       links: [
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "Avis Rent a Car",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "Avis Rent a Car",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "Avis Rent a Car",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "Avis Rent a Car",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "Avis Rent a Car",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "Avis Rent a Car",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "Avis Rent a Car",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "Avis Rent a Car",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "Avis Rent a Car",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "Avis Rent a Car",
         }
       ]
@@ -175,43 +175,43 @@ export const linksConfig = {
       title: "Uçak Bileti",
       links: [
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "İstanbul Uçak Bileti",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "İstanbul Uçak Bileti",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "İstanbul Uçak Bileti",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "İstanbul Uçak Bileti",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "İstanbul Uçak Bileti",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "İstanbul Uçak Bileti",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "İstanbul Uçak Bileti",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "İstanbul Uçak Bileti",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "İstanbul Uçak Bileti",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "İstanbul Uçak Bileti",
         }
       ]
@@ -220,19 +220,19 @@ export const linksConfig = {
       title: "Kurumsal & Destek",
       links: [
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "Hakkımızda",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "Hakkımızda",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "Hakkımızda",
         },
         {
-          href: "https://yolcu360.com/sirketler",
+          href: "/sirketler",
           text: "Hakkımızda",
         },
         {

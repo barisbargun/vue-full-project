@@ -2,28 +2,28 @@
 import { CarAlt } from '@/components/icons'
 import { ref } from 'vue'
 import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-vue-next'
-import { Button } from '@/components/ui'
+import { Button, Checkbox } from '@/components/ui'
 import {
   FaqAccordion,
   DestinationCarousel,
   FeatureCard,
   CampaignCarousel,
   FilterSearch,
-  FilterDate,
-} from './components'
+  FilterDate
+} from './_components'
 import { faq } from '@/constants/faq'
-import assets from '@/assets'
 import { siteConfig } from '@/constants/site'
-import { BlankImgLink } from '@/components/shared'
 import { linksConfig } from '@/constants/links'
+import assets from '@/assets'
+import { CustomBlankLink } from '@/components/shared'
+import { routeNames } from '@/constants/route'
 
 const isDiffPlace = ref(false)
 const vehicleDestination = ref(0)
-
 </script>
 
 <template>
-  <!-- Section Filter -->
+  <!-- Filter -->
   <section class="page-padding items-center bg-primary px-3 py-5 text-primary-foreground">
     <h1 class="text-center text-3xl font-semibold">Araç Kiralamak Ne Kolaymış!</h1>
     <h2 class="text-center text-xl text-primary-foreground/60">
@@ -59,7 +59,7 @@ const vehicleDestination = ref(0)
     <Button class="mt-2 w-full !bg-orange-400 font-medium uppercase">Araç ara</Button>
   </section>
 
-  <!-- Section Suppliers -->
+  <!-- Suppliers -->
   <section class="page-padding flex flex-col items-center">
     <h2 class="sr-only">Tüm Tedarikçiler</h2>
     <div class="flex items-center gap-2">
@@ -77,7 +77,7 @@ const vehicleDestination = ref(0)
     <Button class="mt-2" severity="secondary">Tüm Tedarikçiler</Button>
   </section>
 
-  <!-- Section Campaigns -->
+  <!-- Campaigns -->
   <section class="page-padding">
     <div class="mb-4 flex justify-between gap-10">
       <div class="flex flex-col gap-2">
@@ -87,12 +87,12 @@ const vehicleDestination = ref(0)
           keşfedin.
         </h3>
       </div>
-      <Button class="whitespace-nowrap">Tüm Kampanyalar</Button>
+      <RouterLink :to="{name:routeNames.campaign}"><Button class="whitespace-nowrap">Tüm Kampanyalar</Button></RouterLink>
     </div>
     <CampaignCarousel />
   </section>
 
-  <!-- Section Features -->
+  <!-- Features -->
   <section class="page-padding">
     <h2>Yola Bizimle Çıkmak İçin 3 Harika Neden:</h2>
     <div class="flex flex-col gap-4">
@@ -105,7 +105,7 @@ const vehicleDestination = ref(0)
     </div>
   </section>
 
-  <!-- Section Destinations -->
+  <!-- Destinations -->
   <section class="page-padding-y bg-background">
     <div class="page-padding-x">
       <h2>Kampanyalar</h2>
@@ -123,7 +123,7 @@ const vehicleDestination = ref(0)
     </div>
   </section>
 
-  <!-- Section Other Locations -->
+  <!-- Other Locations -->
   <section class="page-padding bg-background">
     <div v-if="vehicleDestination == 0">
       <h2>Diğer Popüler Noktalar ve Havalimanı Lokasyonları</h2>
@@ -142,7 +142,7 @@ const vehicleDestination = ref(0)
     </div>
   </section>
 
-  <!-- Section FAQ -->
+  <!-- FAQ -->
   <section class="page-padding">
     <h2>Sıkça sorulan sorular</h2>
     <div class="flex flex-col gap-1">
@@ -154,6 +154,7 @@ const vehicleDestination = ref(0)
       edebilirsin.
     </p>
   </section>
+
   <!-- Mobile App Banner -->
   <section class="page-padding">
     <div
@@ -169,12 +170,12 @@ const vehicleDestination = ref(0)
         </div>
       </div>
       <div class="mt-4 flex gap-4 [&_img]:w-32">
-        <!-- <BlankImgLink v-for="v in mobileAppLinksConfig" v-bind="v" :key="v.alt" /> -->
+        <CustomBlankLink v-for="v in linksConfig.mobileApp" v-bind="v" :key="v.alt" />
       </div>
     </div>
   </section>
 
-  <!-- Section Brand Information -->
+  <!-- Brand Information -->
   <section class="page-padding">
     <h2>Araç Kiralama | Yolcu360</h2>
     <article>
@@ -209,28 +210,16 @@ const vehicleDestination = ref(0)
       </p>
     </article>
   </section>
-
-  <footer class="bg-primary">
-    <div>
-      <img :src="assets.logoText" alt="logo" class="w-28" />
-      <div class="socialLinks">
-        <!-- <BlankImgLink v-for="v in mobileAppLinksConfig" v-bind="v" :key="v.alt" /> -->
-        <img :src="assets.brands.linkedin" />
-      </div>
-    </div>
-  </footer>
+  
 </template>
 
 <style scoped>
-:global(main) {
-  @apply bg-neutral-100;
-}
-
 .driver-info strong {
   @apply font-medium text-amber-400 underline;
 }
 
-.socialLinks img {
+:deep(.socialLinks img) {
+  @apply size-7;
   filter: invert(85%) sepia(6%) saturate(1643%) hue-rotate(180deg) brightness(100%) contrast(102%);
 }
 </style>
